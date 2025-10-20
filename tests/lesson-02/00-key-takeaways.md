@@ -58,7 +58,7 @@ git config user.email “<your_email>”
 ### 2. Variables and Constants
 **Variables:** 
 - Variables are containers for storing data whose values can be reassigned during program execution. They are declared using `var` or `let`.
-- `var` : This is the older way to declare variables. var declarations are function-scoped or globally-scoped, meaning they are accessible throughout the function they are declared in, or globally if declared outside any function. var variables can be redeclared and reassigned.
+- `var` : This is the older way to declare variables. `var` declarations are function-scoped or globally-scoped, meaning they are accessible throughout the function they are declared in, or globally if declared outside any function. `var` variables can be redeclared and reassigned.
     ```
     var x = 1;
     x = "Hello"; // Reassigned
@@ -71,7 +71,7 @@ git config user.email “<your_email>”
     console.log(a); // OK -> print 10 in console
     ```
 
-- `let`: Introduced in ES6, let provides block-scoped variables. This means a let variable is only accessible within the block (e.g., if statement, for loop, or function) where it is declared. let variables can be reassigned but not redeclared within the same scope
+- `let`: `let` provides block-scoped variables. This means a `let` variable is only accessible within the block (e.g., if statement, for loop, or function) where it is declared. `let` variables can be reassigned but not redeclared within the same scope
     ```
     let y = 1;
     y = "Hello"; // Reassigned
