@@ -6,30 +6,30 @@ a. Tạo 3 file: file1, file2, file3
 
 b. Chạy lệnh: git init
 => Local:
-=> Working directory: file1, file 2, file 3
+=> Working directory: file1, file2, file3
 => Staging are:
 => Repository
 
 c. Chạy lệnh: git commit -m”init project”
 => Local:
-=> Working directory: file1, file 2, file 3
+=> Working directory: file1, file2, file3
 => Staging are:
 => Repository
 
 d. Chạy lệnh: git add file1
 => Local:
-=> Working directory: file 2, file 3
-=> Staging are: file1
+=> Working directory: file1, file2, file3
+=> Staging are: snapshot of changes of file1
 => Repository
 
 e. Chạy lệnh: git commit -m”add file1”
 => Local:
-=> Working directory: file 2, file 3
+=> Working directory: file1, file2, file3
 => Staging are:
-=> Repository: file1
+=> Repository: snapshot of changes of file1
 
 f. Chạy lệnh: git commit -m”add file”
 => Local:
-=> Working directory: file 2, file 3
+=> Working directory: file1, file2, file3
 => Staging are:
-=> Repository: file1
+=> Repository: snapshot of changes of file1
