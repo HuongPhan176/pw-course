@@ -1,4 +1,4 @@
-Git init: to initialize a new, empty git repository in the current working directory
+Git init: to initialize a new, empty git repository/folder in the current working directory
 Git add <file_name> : to add changes (new code or modified code) of a specific file from the working directory to the staging area
 Git add . : to add changes from all files in the current git repository from the working directory to the staging area
 Git commit -m "message" : to save a snapshot of all changes from the staging area into the local repository

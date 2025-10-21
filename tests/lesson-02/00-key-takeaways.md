@@ -116,10 +116,10 @@ git config user.email “<your_email>”
     ```
 - Strictly equal to (===): Checks if the values and types of two operands are equal, without performing type coercion.
     ```
-    5 == "5" // false (different data types)
-    5 == 5 // true (same data type, same value)
-    true == 1 // false (different data types)
-    false == 0 // false (different data types)
+    5 === "5" // false (different data types)
+    5 === 5 // true (same data type, same value)
+    true === 1 // false (different data types)
+    false === 0 // false (different data types)
     ```
 - Not equal to (!=): Checks if the values of two operands are not equal, performing type coercion if necessary.
 - Strictly not equal to (!==): Checks if the values or types of two operands are not equal, without performing type coercion.
