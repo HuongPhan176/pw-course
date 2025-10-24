@@ -1,0 +1,5 @@
+1. git commit --amend : to modify the most recent commit. This command replaces the last commit with a new one that incorporates any staged changes and/or a revised commit message.
+2. git commit --amend -m”<message>”: to modify the most recent commit with a revised commit message.
+3. git restore --staged <file>: to unstage changes in a specific file. This means that the modifications you added to the staging area for that file will be removed and no longer be included in the next commit unless add it again.
+Note: this command only affects the staging area. Working directory changes are preserved.
+4. git reset HEAD~1 : to undo the last commit and keep changes in working directory but no longer in the staging area.
