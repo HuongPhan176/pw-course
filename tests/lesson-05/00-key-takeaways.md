@@ -260,7 +260,7 @@ import { test, expect } from '@playwright/test';
 test('Delete task in to-do list success', async ({ page }) => {
     await test.step("Navigate to To-Do List page", async () => {
         await page.goto('https://material.playwrightvn.com');
-        await page.click("//a[href='03-xpath-todo-list.html']");
+        await page.click("//a[@href='03-xpath-todo-list.html']");
     });
     await test.step("Create new task", async () => {
         await page.locator("//input[@id='new-task']").fill("task 1");
