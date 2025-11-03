@@ -2,7 +2,8 @@ import { test, expect } from '@playwright/test';
 
 test('Register success', async ({ page }) => {
     await test.step("Navigate to register page", async () => {
-        await page.goto('https://material.playwrightvn.com/01-xpath-register-page.html');
+        await page.goto('https://material.playwrightvn.com');
+        await page.locator("//a[@href='01-xpath-register-page.html']").click();
     });
     await test.step("Input valid data for all fields", async () => {
         await page.locator("//input[@id = 'username']").fill("Jay Phan");
