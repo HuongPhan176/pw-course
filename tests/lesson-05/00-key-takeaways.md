@@ -259,7 +259,7 @@ By default, dialogs are auto-dismissed by Playwright, so you don't have to handl
 import { test, expect } from '@playwright/test';
 test('Delete task in to-do list success', async ({ page }) => {
     await test.step("Navigate to To-Do List page", async () => {
-        await page.goto('https://material.playwrightvn.com/01-xpath-register-page.html');
+        await page.goto('https://material.playwrightvn.com');
         await page.click("//a[href='03-xpath-todo-list.html']");
     });
     await test.step("Create new task", async () => {
