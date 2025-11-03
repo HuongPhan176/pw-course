@@ -269,6 +269,7 @@ test('Delete task in to-do list success', async ({ page }) => {
 
     //click delete button => confirmation dialog appears => click ok button in the dialog
     await test.step("Delete created task", async () => {
+        page.on('dialog', dialog => dialog.accept());
         await page.locator("//button[text()= 'Delete']").click();
     });
 });
