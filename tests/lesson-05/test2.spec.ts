@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('Add to cart all products success', async ({ page }) => {
-    await test.step("Navigate to register page", async () => {
+    await test.step("Navigate to product page", async () => {
         await page.goto('https://material.playwrightvn.com');
         await page.locator("//a[@href='02-xpath-product-page.html']").click();
     });
