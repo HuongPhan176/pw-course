@@ -205,9 +205,18 @@ test('<test_name>', async ({ page }) => {
 **Upload file**
 - Syntax: `.setInputFiles("<file_path>");`
 
+**Hover**
+- Syntax: `.hover();`
+
+** Tex() and Contains() function in selector
+-  `text()` to locate element that having a precise match of the entire text string within an element
+- `contains()` to locate an element by matching part of its attribute or text content with a specific string. E.g.`//div[contains(text(), ‘I am Alex’)]` or `//button[contains(@class, 'secondary')]`
+
 **Example**
 ```
-test('get started link', async ({ page }) => {
+import { test, expect } from '@playwright/test';
+
+test('Register success', async ({ page }) => {
     await test.step("Navigate to register page", async () => {
         await page.goto('https://material.playwrightvn.com/01-xpath-register-page.html');
     });
@@ -242,6 +251,27 @@ test('get started link', async ({ page }) => {
     });
 });
 ```
+
+**Handle confirmation dialog**
+By default, dialogs are auto-dismissed by Playwright, so you don't have to handle them. However, you can register a dialog handler before the action that triggers the dialog to either dialog.accept() or dialog.dismiss() it.
+
+```
+import { test, expect } from '@playwright/test';
+test('Delete task in to-do list success', async ({ page }) => {
+    await test.step("Navigate to To-Do List page", async () => {
+        await page.goto('https://material.playwrightvn.com/01-xpath-register-page.html');
+        await page.click("//a[href='03-xpath-todo-list.html']");
+    });
+    await test.step("Create new task", async () => {
+        await page.locator("//input[@id='new-task']").fill("task 1");
+        await page.locator("//button[@id='add-task']").click();
+    });
+
+    //click delete button => confirmation dialog appears => click ok button in the dialog
+    await test.step("Delete created task", async () => {
+        await page.locator("//button[text()= 'Delete']").click();
+    });
+});
 
 
 
